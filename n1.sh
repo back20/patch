@@ -31,10 +31,10 @@ rm -rf ./feeds/luci/applications/luci-app-dockerman
 rm -rf ./feeds/luci/applications/luci-app-unblockmusic
 rm -rf ./feeds/luci/applications/luci-app-aliyundrive-fuse
 echo
-TIME y "修改 默认IP为 192.168.123.2"
-sed -i "s/192.168.1.1/192.168.123.2/g" package/base-files/files/bin/config_generate
-TIME y "修改 主机名为 N1"
-sed -i "s/'OpenWrt'/'N1'/g" package/base-files/files/bin/config_generate
+TIME y "修改 默认IP为 192.168.50.1"
+sed -i "s/192.168.1.1/192.168.50.1/g" package/base-files/files/bin/config_generate
+TIME y "修改 主机名为 openwrt"
+sed -i "s/'OpenWrt'/'openwrt'/g" package/base-files/files/bin/config_generate
 curl -fsSL https://github.com/gd0772/patch/raw/main/zzz-default-settings > ./package/lean/default-settings/files/zzz-default-settings
 curl -fsSL https://raw.githubusercontent.com/gd0772/patch/main/udpxy.lua > ./feeds/luci/applications/luci-app-udpxy/luasrc/controller/udpxy.lua
 #echo
