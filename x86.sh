@@ -38,7 +38,7 @@ curl -fsSL https://raw.githubusercontent.com/back20/patch/main/smb.conf.template
 curl -fsSL https://raw.githubusercontent.com/back20/patch/main/udpxy.lua > ./feeds/luci/applications/luci-app-udpxy/luasrc/controller/udpxy.lua
 TIME b "系统文件 修改完成"
 echo
-TIME y "添加 gd772 Package"
+TIME y "添加 back20 Package"
 rm -rf package/back20 && git clone https://github.com/back20/package package/back20
 echo
 TIME y "添加 SSR Plus+"
